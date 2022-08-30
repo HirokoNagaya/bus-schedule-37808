@@ -1,5 +1,5 @@
 {
-  "name": "bus_work_schedule",
+  "name":"bus_schedule37808",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
