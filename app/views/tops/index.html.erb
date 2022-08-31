@@ -12,12 +12,18 @@
     </div>
     <div class="navbar">
       <ul class="nav-lists">
+      <% if user_signed_in? %>
+      <li class="user-status">
+          <%= link_to "ログアウト",  destroy_user_session_path, method: :delete %>
+        </li>
+        <% else %>      
         <li class="user-status">
           <%= link_to "新規登録", new_user_registration_path, class: "post" %>
         </li>
         <li class="user-status">
           <%= link_to "ログイン", new_user_session_path, class: "post" %>
         </li>
+      <% end %>
         <li class="background-blue">連絡
         </li>
         <li>スケジュール</li>
