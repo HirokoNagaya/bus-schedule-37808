@@ -43,8 +43,8 @@ li{
   top: 70px;
   background-color: #ffffff;
 }
-.background-red{
-  background-color: #FF6666 ;
+.background-blue{
+  background-color: #33CCCC ;
   color: white;
 }
 .pull-down-list{
@@ -55,6 +55,6 @@ li{
   height: 100vh;
   background-color: #f0f0f0;
 }
-.list-status{
-  width: 230px;
+.user-status{
+  width: 70px;
 }
