@@ -13,10 +13,10 @@
     <div class="navbar">
       <ul class="nav-lists">
         <li class="user-status">
-          新規登録
+          <%= link_to "新規登録", new_user_registration_path, class: "post" %>
         </li>
         <li class="user-status">
-          ログイン
+          <%= link_to "ログイン", new_user_session_path, class: "post" %>
         </li>
         <li class="background-blue">連絡
         </li>
