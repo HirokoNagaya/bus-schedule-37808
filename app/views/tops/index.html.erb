@@ -31,6 +31,12 @@
       <ul class="show-lists"></ul>
     </div>
   </header>
-  <div class="contents"></div>
+  <div class="contents">
+    <% if user_signed_in? %>
+    <h3 class="greeting">
+       <%= "こんにちは、#{current_user.name}さん" %>
+    </h3>
+    <% end %>
+  </div>
 </body>
 </html>
