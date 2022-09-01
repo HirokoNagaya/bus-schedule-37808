@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
-  validates :employee_number, presence: true, length: { is: 3 }      
+  validates :employee_number, presence: true, length: { is: 3 }
 end

@@ -15,12 +15,12 @@ RSpec.describe User, type: :model do
       it 'nameが空では登録できない' do
         @user.name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include "Name can't be blank" 
+        expect(@user.errors.full_messages).to include "Name can't be blank"
       end
       it 'employee_numberが空では登録できない' do
         @user.employee_number = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include "Employee number can't be blank" 
+        expect(@user.errors.full_messages).to include "Employee number can't be blank"
       end
       it 'emailが空では登録できない' do
         @user.email = ''
@@ -58,14 +58,13 @@ RSpec.describe User, type: :model do
       it 'employee_numberが1桁では登録できない' do
         @user.employee_number = '1'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Employee number is the wrong length (should be 3 characters)" 
+        expect(@user.errors.full_messages).to include 'Employee number is the wrong length (should be 3 characters)'
       end
       it 'employee_numberが2桁では登録できない' do
         @user.employee_number = '11'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Employee number is the wrong length (should be 3 characters)" 
+        expect(@user.errors.full_messages).to include 'Employee number is the wrong length (should be 3 characters)'
       end
     end
   end
 end
-
