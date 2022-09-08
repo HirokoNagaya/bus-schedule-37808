@@ -1,6 +1,6 @@
 <div class="side-bar-header">
  <div class="header-name">
-    <a href="#">Tom</a>
+    <%= "#{current_user.name}さん" %>
   </div>
   <div class="create-room">
     <%= link_to "連絡する", new_post_path %>
@@ -8,10 +8,10 @@
 </div>
 
 <div class="rooms">
-  <% current_user.posts.each do |post| %>
+   <% current_user.posts.each do |post| %>
     <div class="room">
       <div class="room-name">
-        <a href="#"><%= post.name %></a>
+        <%= link_to post.name, post_messages_path(post) %>
       </div>
     </div>
   <% end %>

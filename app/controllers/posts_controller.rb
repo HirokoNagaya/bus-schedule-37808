@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   
   def index
+    @message = Message.new
+    @post = Post.find(params[:post_id])
   end
 
   def new
