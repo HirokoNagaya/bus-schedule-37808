@@ -24,7 +24,8 @@
           <%= link_to "ログイン", new_user_session_path, class: "post" %>
         </li>
       <% end %>
-        <li class="background-blue">連絡
+        <li class="background-blue">
+        <%= link_to "連絡", posts_path, method: :get %>
         </li>
         <li>スケジュール</li>
       </ul>

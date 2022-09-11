@@ -1,0 +1,18 @@
+<div class="side-bar-header">
+ <div class="header-name">
+    <%= "#{current_user.name}さん" %>
+  </div>
+  <div class="create-room">
+    <%= link_to "連絡する", new_post_path %>
+  </div>
+</div>
+
+<div class="rooms">
+   <% current_user.posts.each do |post| %>
+    <div class="room">
+      <div class="room-name">
+         <%= link_to post.name, post_messages_path(post) %>
+      </div>
+    </div>
+  <% end %>
+</div>
