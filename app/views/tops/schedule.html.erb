@@ -1,8 +1,19 @@
-<div class="schedule">
-  <div class="return_top">
-    <%= link_to "トップに戻る", root_path %>
+<body>
+  <header>
+    <div class="heading">
+      <h1 class="title">BusSchedule</h1>
+    </div>
+    <div class="navbar">
+      <ul class="nav-lists">
+          <li class="return-top">
+            <%= link_to "トップに戻る", root_path %>
+          </li>
+      </ul>
+     </div>
+  </header>
+  <div class="calender-back">
+    <div class="calender">
+      <iframe src="https://calendar.google.com/calendar/embed?src=c2hvg721ljm2dt2ij0a99o00ks%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="90%" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
   </div>
-  <div class="calender">
-    <iframe src="https://calendar.google.com/calendar/embed?src=c2hvg721ljm2dt2ij0a99o00ks%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="90%" height="500" frameborder="0" scrolling="no"></iframe>
-  </div>
-</div>
+</body>
