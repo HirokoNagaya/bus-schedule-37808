@@ -37,9 +37,7 @@ li{
   justify-content: space-around;
   
 }
-.red{
-  background-color: red;
-}
+
 .show-lists{
   width: 200px;
   position: absolute;
@@ -64,4 +62,17 @@ li{
 }
 a {
   text-decoration: none;
+}
+.return-top{
+  background-color: #33CCCC ;
+  color: white;
+}
+.calender-back{
+  height: 100vh;
+  background-color: #f0f0f0;
+  
+}
+.calender{
+  margin-left: 100px;
+  margin-top: 100px;
 }
