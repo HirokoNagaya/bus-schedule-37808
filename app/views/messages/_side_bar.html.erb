@@ -2,6 +2,9 @@
  <div class="header-name">
     <%= "#{current_user.name}さん" %>
   </div>
+  <div class="top">
+    <%= link_to "TOP", root_path%>
+  </div>
   <div class="create-room">
     <%= link_to "連絡する", new_post_path %>
   </div>
