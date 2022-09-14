@@ -38,8 +38,24 @@ https://bus-schedule-37808.herokuapp.com/
 https://docs.google.com/spreadsheets/d/1dYcUoy9oraXT-QqgrFZUfbBMAGIWFItu3Ce2fYYjW4Y/edit#gid=982722306
 
 
+# 実装した機能についての画像やGIFおよびその説明
+TOP画面
+[![Image from Gyazo](https://i.gyazo.com/70c43ed26bacd28f4aed86075aed4fe2.jpg)](https://gyazo.com/70c43ed26bacd28f4aed86075aed4fe2)
 
+サインアップ画面
+[![Image from Gyazo](https://i.gyazo.com/6ca24348c7e9fa546684a7adf7a6559e.png)](https://gyazo.com/6ca24348c7e9fa546684a7adf7a6559e)
 
+ログイン動画
+[![Image from Gyazo](https://i.gyazo.com/10f2d09d744f60af0d675e460f955496.gif)](https://gyazo.com/10f2d09d744f60af0d675e460f955496)
+
+スケジュール画面
+[![Image from Gyazo](https://i.gyazo.com/b833f922183e5ed4720982e4525152de.png)](https://gyazo.com/b833f922183e5ed4720982e4525152de)
+
+チャットルーム作成動画
+[![Image from Gyazo](https://i.gyazo.com/efd1d49e297a9ab405eee22c24e27edb.gif)](https://gyazo.com/efd1d49e297a9ab405eee22c24e27edb)
+
+チャット動画
+[![Image from Gyazo](https://i.gyazo.com/fa12f64e310287519f662bf921959a26.gif)](https://gyazo.com/fa12f64e310287519f662bf921959a26)
 
 # 実装予定の機能
 各職員がどの運行先へ何回運転したかをカウントし、記録する機能を実装予定。
