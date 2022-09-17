@@ -57,8 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rename'
 gem 'devise'
 gem 'pry-rails'
-gem "chartkick"
-gem 'chartable'
+
+gem 'chartkick'
 
 group :development do
   gem 'rubocop', require: false
