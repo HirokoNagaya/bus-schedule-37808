@@ -4,4 +4,5 @@ class TopsController < ApplicationController
 
   def schedule
   end
+
 end
