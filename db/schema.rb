@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_07_011617) do
+ActiveRecord::Schema.define(version: 2022_09_18_015821) do
+
+  create_table "destinations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "long_distance", null: false
+    t.integer "middle_distance", null: false
+    t.integer "short_distance", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_destinations_on_user_id"
+  end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
@@ -51,6 +61,7 @@ ActiveRecord::Schema.define(version: 2022_09_07_011617) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "destinations", "users"
   add_foreign_key "messages", "posts"
   add_foreign_key "messages", "users"
   add_foreign_key "post_users", "posts"
