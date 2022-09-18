@@ -58,6 +58,8 @@ gem 'rename'
 gem 'devise'
 gem 'pry-rails'
 
+gem 'chartkick'
+
 group :development do
   gem 'rubocop', require: false
 end

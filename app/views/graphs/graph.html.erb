@@ -1,0 +1,21 @@
+<body>
+  <header>
+    <div class="heading">
+      <h1 class="title">BusSchedule</h1>
+    </div>
+    <div class="navbar">
+      <ul class="nav-lists">
+          <li class="return-top">
+            <%= link_to "トップに戻る", root_path %>
+          </li>
+      </ul>
+     </div>
+  </header>
+  <div class="calender-back">
+    <div class="graph">
+    杉本佐一さんの運行先
+     <%= pie_chart [['長距離運行', 2], ['中距離運行', 2],['短距離運行', 1]]%>
+     
+    </div>
+  </div>
+</body>

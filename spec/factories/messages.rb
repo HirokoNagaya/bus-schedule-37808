@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :message do
-    content {'hello'}
+    content { 'hello' }
     association :user
-    association :post    
+    association :post
   end
 end

@@ -28,7 +28,11 @@ https://bus-schedule-37808.herokuapp.com/
 2.チャットルーム名とチャット相手を選択してチャットルームを作成する。
 
 3.シフトを組む際の休み希望日を連絡するなど、仕事の連絡事項を伝える。
+## 運行先記録
+1.トップページの上部から連絡ボタンを押して運行先記録画面に移動する。
 
+2.長距離運行、中距離運行、短距離運行の割合円グラフが確認できる。
+職員の運行先に偏りがないか確認できる。
 
 # アプリケーションを作成した背景
 職場でバス乗車職員のシフトを組む仕事において、職員は休み希望日を紙ベースでシフト作成担当者に提出していた。紙ベースでのやりとりは書類の紛失、書類の提出や確認に遅れが出ることがある、というデメリットがあった。そのデメリットの解消のため、休み希望日はチャットで行い、シフトも確認できるアプリケーションを開発することにした。
@@ -40,7 +44,7 @@ https://docs.google.com/spreadsheets/d/1dYcUoy9oraXT-QqgrFZUfbBMAGIWFItu3Ce2fYYj
 
 # 実装した機能についての画像やGIFおよびその説明
 TOP画面
-[![Image from Gyazo](https://i.gyazo.com/70c43ed26bacd28f4aed86075aed4fe2.jpg)](https://gyazo.com/70c43ed26bacd28f4aed86075aed4fe2)
+[![Image from Gyazo](https://i.gyazo.com/41a12fe6690dfac337f8f1a3f4703a70.jpg)](https://gyazo.com/41a12fe6690dfac337f8f1a3f4703a70)
 
 サインアップ画面
 [![Image from Gyazo](https://i.gyazo.com/6ca24348c7e9fa546684a7adf7a6559e.png)](https://gyazo.com/6ca24348c7e9fa546684a7adf7a6559e)
@@ -57,6 +61,9 @@ TOP画面
 チャット動画
 [![Image from Gyazo](https://i.gyazo.com/fa12f64e310287519f662bf921959a26.gif)](https://gyazo.com/fa12f64e310287519f662bf921959a26)
 
+運行先記録グラフ
+[![Image from Gyazo](https://i.gyazo.com/09f4f0a7e6138f5a9a9f3a80ca63f526.png)](https://gyazo.com/09f4f0a7e6138f5a9a9f3a80ca63f526)
+
 # 実装予定の機能
 各職員がどの運行先へ何回運転したかをカウントし、記録する機能を実装予定。
 
@@ -66,7 +73,7 @@ TOP画面
 
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/2b19fe50f62282c22a9b8eba76f512fb.png)](https://gyazo.com/2b19fe50f62282c22a9b8eba76f512fb)
+[![Image from Gyazo](https://i.gyazo.com/869d8242b3a78e60fc0a10dc556df6cb.png)](https://gyazo.com/869d8242b3a78e60fc0a10dc556df6cb)
 
 
 # 開発環境
