@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2022_09_18_015821) do
 
   create_table "destinations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.integer "month", null: false
     t.integer "long_distance", null: false
     t.integer "middle_distance", null: false
     t.integer "short_distance", null: false
