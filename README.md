@@ -32,6 +32,7 @@ https://bus-schedule-37808.herokuapp.com/
 1.トップページの上部から連絡ボタンを押して運行先記録画面に移動する。
 
 2.長距離運行、中距離運行、短距離運行の割合円グラフが確認できる。
+
 職員の運行先に偏りがないか確認できる。
 
 # アプリケーションを作成した背景
@@ -69,7 +70,7 @@ TOP画面
 
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/92db6d0f17cb435d2f70aa3bb77803d5.png)](https://gyazo.com/92db6d0f17cb435d2f70aa3bb77803d5)
+[![Image from Gyazo](https://i.gyazo.com/906e0179505ec0ba82ed97989d344f88.png)](https://gyazo.com/906e0179505ec0ba82ed97989d344f88)
 
 
 # 画面遷移図
@@ -99,6 +100,7 @@ Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/Heroku
 - has_many :post_users
 - has_many :posts, through: :post_users
 - has_many :messages
+- belongs_to :destination
 
 ## posts テーブル
 
@@ -135,4 +137,17 @@ Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/Heroku
 ### Association
 
 - belongs_to :post
+- belongs_to :user
+
+## destinations テーブル
+
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| user            | references | null: false, foreign_key: true |
+| long_distance   | integer    | null: false                    |
+| middle_distance | integer    | null: false                    |
+| short_distance  | integer    | null: false                    |
+
+### Association
+
 - belongs_to :user
