@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :posts, only: [:new, :create, :index, :destroy] do
     resources :messages, only: [:index, :create]
   end
+  resources :destinations, only: [:new, :create]
 end
