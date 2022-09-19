@@ -1,12 +1,6 @@
 <%= form_with model: destination, local: true do |f|%>
   <div class="field">
-    <select name="destination[user_ids][]">
-          <option value="">記録するユーザーを選択してください</option>
-           <% User.all.each do |user| %>
-              <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="destination[user_ids][]" type="hidden" value=<%= current_user.id %>>
+    名前
   </div>
 
   <div class="field">
