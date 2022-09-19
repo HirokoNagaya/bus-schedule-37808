@@ -144,6 +144,7 @@ Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/Heroku
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | user            | references | null: false, foreign_key: true |
+| month           | integer    | null: false
 | long_distance   | integer    | null: false                    |
 | middle_distance | integer    | null: false                    |
 | short_distance  | integer    | null: false                    |
