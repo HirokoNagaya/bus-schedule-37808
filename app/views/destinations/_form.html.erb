@@ -1,12 +1,15 @@
 <%= form_with model: destination, local: true do |f|%>
   <div class="field">
     名前
-    <select name="destination[user_ids][]">
+    <select name="user_id">
           <option value="">記録するユーザーを選択してください</option>
           <% User.all.each do |user| %>
     <option value=<%= user.id %>><%= user.name %></option>
           <% end %>
-        </select>
+        </select><br /><br />
+    <%= f.label :user_id, "ユーザーID" %><br />         
+    <%= f.text_area :user_id, class: :form__text, id:"user_id" %>
+
   </div>
 
   <div class="field">

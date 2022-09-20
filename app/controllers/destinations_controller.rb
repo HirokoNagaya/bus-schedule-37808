@@ -15,7 +15,7 @@ class DestinationsController < ApplicationController
 
   private
     def destination_params
-      params.require(:destination).permit(:user_id, :month, :long_distance, :middle_distance, :short_distance)
+      params.require(:destination).permit(:month, :long_distance, :middle_distance, :short_distance, :user_id )
     end
 
 end
