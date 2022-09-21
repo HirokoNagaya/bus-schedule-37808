@@ -9,12 +9,12 @@
               <%= link_to "トップに戻る", root_path %>
             </li>
             <li>
-            <%= link_to "運行先表示画面に戻る", new_destination_path %>
+            <%= link_to "運行先表示画面に戻る", graphs_graph_path %>
             </li>
         </ul>
       </div>
     </header>
-  <div class="form_wrapper">
+  <div class="calender-back">
     <h2 class="page-heading">運行先を記録する</h2>
       <%= render partial: 'form', locals: { destination: @destination } %>
   </div>
