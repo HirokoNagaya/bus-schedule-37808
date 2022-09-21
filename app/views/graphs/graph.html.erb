@@ -20,5 +20,6 @@
      <%= pie_chart [['長距離運行', 2], ['中距離運行', 2],['短距離運行', 1]]%>
      
     </div>
+ <%= render partial: 'destinations/destination', locals: { destination: @destination } %>    
   </div>
 </body>

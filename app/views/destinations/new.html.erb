@@ -1,6 +1,21 @@
-<div class="form_wrapper">
-  <h2 class="page-heading">運行先を記録する</h2>
-    <%= render partial: 'form', locals: { destination: @destination } %>
-</div>
-
- <%= render partial: 'destination', locals: { destination: @destination } %>
+<body>
+  <header>
+      <div class="heading">
+        <h1 class="title">BusSchedule</h1>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+            <li class="return-top">
+              <%= link_to "トップに戻る", root_path %>
+            </li>
+            <li>
+            <%= link_to "運行先表示画面に戻る", new_destination_path %>
+            </li>
+        </ul>
+      </div>
+    </header>
+  <div class="form_wrapper">
+    <h2 class="page-heading">運行先を記録する</h2>
+      <%= render partial: 'form', locals: { destination: @destination } %>
+  </div>
+</body>
