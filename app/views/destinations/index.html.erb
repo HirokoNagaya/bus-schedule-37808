@@ -1,0 +1,9 @@
+  <% @destinations.each do |destination| %>
+      杉本佐一さんの<%= destination.month %>月の運行記録<br />
+      長距離運行
+        <%= destination.long_distance %>回<br />
+      中距離運行
+      <%= destination.middle_distance %>回<br />
+      短距離運行
+       <%= destination.middle_distance %>回<br />
+  <% end %>
