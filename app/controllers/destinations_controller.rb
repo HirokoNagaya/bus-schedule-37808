@@ -1,5 +1,8 @@
 class DestinationsController < ApplicationController
 
+  def destroy
+  end
+
   def index
     @destinations = Destination.all
   end
