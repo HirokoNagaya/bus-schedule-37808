@@ -1,7 +1,7 @@
 class DestinationsController < ApplicationController
 
   def show
-    
+    @destination = Destination.find(params[:id])
   end
   
   def destroy
@@ -12,6 +12,7 @@ class DestinationsController < ApplicationController
 
   def index
     @destinations = Destination.all
+
   end
 
   def new
