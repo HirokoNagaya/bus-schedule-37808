@@ -1,5 +1,6 @@
 class DestinationsController < ApplicationController
   def edit
+    @destination = Destination.find(params[:id])
   end
 
   def update
