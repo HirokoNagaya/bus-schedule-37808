@@ -14,8 +14,9 @@
     </div>
 </header>
 <div class="calender-back">
+名前を押すと詳細ページへ移動します。
   <% @destinations.each do |destination| %>
-        <h2><%=destination.user.name %>さんの<%= destination.month %>月の運行記録</h2><br />
+        <h2><%= link_to destination.user.name, destination_path(destination) %>さんの<%= destination.month %>月の運行記録</h2><br />
         長距離運行
           <%= destination.long_distance %>回<br />
         中距離運行
