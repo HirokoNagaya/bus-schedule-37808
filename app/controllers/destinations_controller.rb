@@ -1,6 +1,13 @@
 class DestinationsController < ApplicationController
 
+  def show
+    
+  end
+  
   def destroy
+    @destination = Destination.find(params[:id])
+    @destination.destroy
+    redirect_to root_path
   end
 
   def index
