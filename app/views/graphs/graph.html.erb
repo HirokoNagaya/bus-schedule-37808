@@ -8,6 +8,9 @@
           <li class="return-top">
             <%= link_to "トップに戻る", root_path %>
           </li>
+          <li>
+          <%= link_to "運行先を記録する", new_destination_path %>
+          </li>
       </ul>
      </div>
   </header>
@@ -17,5 +20,7 @@
      <%= pie_chart [['長距離運行', 2], ['中距離運行', 2],['短距離運行', 1]]%>
      
     </div>
+<%= render partial: 'destinations/destination', locals: { destination: @destination } %>
+    
   </div>
 </body>

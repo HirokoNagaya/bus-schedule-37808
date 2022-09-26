@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: "tops#index"
   get "tops/schedule"
   get "graphs/graph"
+  resources :destinations, only: [:new, :create, :index, :destroy, :show, :edit, :update]
   resources :posts, only: [:new, :create, :index, :destroy] do
     resources :messages, only: [:index, :create]
   end
+ 
 end

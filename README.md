@@ -32,6 +32,7 @@ https://bus-schedule-37808.herokuapp.com/
 1.トップページの上部から連絡ボタンを押して運行先記録画面に移動する。
 
 2.長距離運行、中距離運行、短距離運行の割合円グラフが確認できる。
+
 職員の運行先に偏りがないか確認できる。
 
 # アプリケーションを作成した背景
@@ -62,18 +63,18 @@ TOP画面
 [![Image from Gyazo](https://i.gyazo.com/fa12f64e310287519f662bf921959a26.gif)](https://gyazo.com/fa12f64e310287519f662bf921959a26)
 
 運行先記録グラフ
-[![Image from Gyazo](https://i.gyazo.com/09f4f0a7e6138f5a9a9f3a80ca63f526.png)](https://gyazo.com/09f4f0a7e6138f5a9a9f3a80ca63f526)
+[![Image from Gyazo](https://i.gyazo.com/469a88941883f8e681e6f31a476bba63.png)](https://gyazo.com/469a88941883f8e681e6f31a476bba63)
 
 # 実装予定の機能
 各職員がどの運行先へ何回運転したかをカウントし、記録する機能を実装予定。
 
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/92db6d0f17cb435d2f70aa3bb77803d5.png)](https://gyazo.com/92db6d0f17cb435d2f70aa3bb77803d5)
+[![Image from Gyazo](https://i.gyazo.com/906e0179505ec0ba82ed97989d344f88.png)](https://gyazo.com/906e0179505ec0ba82ed97989d344f88)
 
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/869d8242b3a78e60fc0a10dc556df6cb.png)](https://gyazo.com/869d8242b3a78e60fc0a10dc556df6cb)
+[![Image from Gyazo](https://i.gyazo.com/40ce613fe2f4a26f434f16a578cf73a6.png)](https://gyazo.com/40ce613fe2f4a26f434f16a578cf73a6)
 
 
 # 開発環境
@@ -99,6 +100,7 @@ Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/Heroku
 - has_many :post_users
 - has_many :posts, through: :post_users
 - has_many :messages
+- has_many :destination
 
 ## posts テーブル
 
@@ -135,4 +137,18 @@ Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/Heroku
 ### Association
 
 - belongs_to :post
+- belongs_to :user
+
+## destinations テーブル
+
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| user            | references | null: false, foreign_key: true |
+| month           | integer    | null: false                    |
+| long_distance   | integer    | null: false                    |
+| middle_distance | integer    | null: false                    |
+| short_distance  | integer    | null: false                    |
+
+### Association
+
 - belongs_to :user

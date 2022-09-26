@@ -1,0 +1,33 @@
+<header>
+  <div class="heading">
+    <h1 class="title">BusSchedule</h1>
+  </div>
+  <div class="navbar">
+    <ul class="nav-lists">
+        <li class="return-top">
+          <%= link_to "トップに戻る", root_path %>
+        </li>
+        <li>
+        <%= link_to "運行先を記録する", new_destination_path %>
+        </li>
+    </ul>
+    </div>
+</header>
+<div class="calender-back">
+名前を押すと編集、削除ページへ移動します。
+  <% @destinations.each do |destination| %>
+        <h2><%= link_to destination.user.name, destination_path(destination) %>さんの<%= destination.month %>月の運行記録</h2><br />
+        長距離運行
+          <%= destination.long_distance %>回<br />
+        中距離運行
+        <%= destination.middle_distance %>回<br />
+        短距離運行
+        <%= destination.short_distance %>回<br />
+
+  <br /><br />
+      <div class="graph">
+      <%=destination.user.name %>さんの運行先割合グラフ
+      <%= pie_chart [['長距離運行', destination.long_distance], ['中距離運行', destination.middle_distance],['短距離運行', destination.short_distance]]%>
+      </div>
+  <% end %>
+</div>

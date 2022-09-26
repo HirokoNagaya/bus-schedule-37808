@@ -1,0 +1,40 @@
+<%= form_with model: destination, local: true do |f|%>
+  <div class="field">
+    名前
+    <select name="user_id">
+          <option value="">記録するユーザーを選択してください</option>
+          <% User.all.each do |user| %>
+    <option value=<%= user.id %>><%= user.name %></option>
+          <% end %>
+        </select><br /><br />
+    <%= f.label :user_id, "ユーザーID" %><br />         
+    <%= f.text_area :user_id, class: :form__text, id:"user_id" %>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :month, "月" %><br />
+    <%= f.text_area :month, class: :form__text, id:"month" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :long_distance , "長距離運行" %><br />
+    <%= f.text_area :long_distance, class: :form__text, id:"long_distance" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :middle_distance , "中距離運行" %><br />
+    <%= f.text_area :middle_distance, class: :form__text, id:"middle_distance" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :short_distance , " 短距離運行" %><br />
+    <%= f.text_area :short_distance, class: :form__text, id:"short_distance" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
+
+
