@@ -1,0 +1,21 @@
+<body>
+  <header>
+      <div class="heading">
+        <h1 class="title">BusSchedule</h1>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+            <li class="return-top">
+              <%= link_to "トップに戻る", root_path %>
+            </li>
+            <li>
+            <%= link_to "運行先表示画面に戻る", destinations_path %>
+            </li>
+        </ul>
+      </div>
+    </header>
+  <div class="calender-back">
+    <h2 class="page-heading">運行先を編集する</h2>
+      <%= render partial: 'form', locals: { destination: @destination } %>
+  </div>
+</body>

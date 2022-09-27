@@ -4,6 +4,12 @@ class DestinationsController < ApplicationController
   end
 
   def update
+    @destination = Destination.find(params[:id])
+    if @destination.update(destination_params)
+      redirect_to destination_path(@destination)
+    else
+      render :edit
+    end
   end
 
   def show
