@@ -1,5 +1,22 @@
-
-<div class="button">
-  <%= link_to "編集する", edit_destination_path(@destination) %><br />
- <%= link_to "削除する", destination_path(@destination),   method: :delete %>    
+<body>
+  <header>
+      <div class="heading">
+        <h1 class="title">BusSchedule</h1>
+      </div>
+      <div class="navbar">
+        <ul class="nav-lists">
+            <li class="return-top">
+              <%= link_to "トップに戻る", root_path %>
+            </li>
+            <li>
+            <%= link_to "運行先表示画面に戻る", destinations_path %>
+            </li>
+        </ul>
+      </div>
+    </header>
+<div class="calender-back">
+  <div class="button">
+    <%= link_to "編集する", edit_destination_path(@destination) %><br />
+  <%= link_to "削除する", destination_path(@destination),   method: :delete %>    
+  </div>
 </div>
