@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Destination, type: :model do
+
   before do
     @destination = FactoryBot.build(:destination)
   end
@@ -25,5 +26,6 @@ RSpec.describe Destination, type: :model do
       end
     end
   end
+
 
 end
