@@ -30,6 +30,12 @@ RSpec.describe Destination, type: :model do
         @destination.valid?
         expect(@destination.errors.full_messages).to include("Long distance can't be blank")
       end
+
+      it 'middle_distanceが空では作成できない' do
+        @destination.middle_distance = ''
+        @destination.valid?
+        expect(@destination.errors.full_messages).to include("Middle distance can't be blank")
+      end
     end
   end
 
