@@ -13,10 +13,10 @@ RSpec.describe Destination, type: :model do
       end
     end
     context '運行先の記録ができない場合' do
-      it 'userが空では作成できない' do
-        @destination.user = ''
+      it 'userが紐付いていないと保存できない' do
+        @destination.user = nil
         @destination.valid?
-        expect(@destination.errors.full_messages).to include("User can't be blank")
+        expect(@destination.errors.full_messages).to include('User must exist')
       end
 
       it 'monthが空では作成できない' do
@@ -35,6 +35,12 @@ RSpec.describe Destination, type: :model do
         @destination.middle_distance = ''
         @destination.valid?
         expect(@destination.errors.full_messages).to include("Middle distance can't be blank")
+      end
+
+      it 'short_distanceが空では作成できない' do
+        @destination.short_distance = ''
+        @destination.valid?
+        expect(@destination.errors.full_messages).to include("Short distance can't be blank")
       end
     end
   end
